@@ -10,6 +10,6 @@ routes.get('/', validateToken ,  getUser)
 routes.get('/student', validateToken ,  getUserByStudent)
 
 routes.delete('/:id',validateToken ,  deleteUser)
-routes.patch('/:id', validateToken ,  updateUser)
+routes.patch('/:id',  updateUser)
 
 module.exports = routes

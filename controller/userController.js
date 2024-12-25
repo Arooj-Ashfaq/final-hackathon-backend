@@ -94,8 +94,7 @@ const loginUser = async (req, res) => {
       id: UserData._id,
       firstName: UserData.firstName,
       lastName: UserData.lastName,
-      email: UserData.email,
-      userType: UserData.userType,
+      email: UserData.email
     });
 
     return res
