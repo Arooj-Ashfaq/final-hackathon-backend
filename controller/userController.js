@@ -37,6 +37,18 @@ const getUser = async (req, res) => {
     res.status(500).json({ message: "An error occurred", error: err.message });
   }
 };
+//................................getUserById.................................
+const getUserById = async(req,res) =>{
+  try {
+    let id = req.params.id
+    const user = await User.findById(id)
+    res
+      .status(200)
+      .json({ message: "Users fetched successfully", user: user });
+  } catch (err) {
+    res.status(404).json({ message: "An error occurred", error: err.message });
+  }
+};
 
 // ............................getUserByStudent................................
 const getUserByStudent = async (req, res) => {
@@ -114,4 +126,5 @@ module.exports = {
   updateUser,
   loginUser,
   getUserByStudent,
+  getUserById
 };

@@ -6,7 +6,6 @@ const generateToken = (payload) => {
         expiresIn: '23h',
     };
     const token = jwt.sign(payload, secretKey, options);
-    console.log(token)
 
     return token;
 };
