@@ -50,18 +50,6 @@ const getUserById = async(req,res) =>{
   }
 };
 
-// ............................getUserByStudent................................
-const getUserByStudent = async (req, res) => {
-  try {
-    const userData = await User.find({ userType: "student" });
-    res
-      .status(200)
-      .json({ message: "Students fetched successfully", user: userData });
-  } catch (err) {
-    res.status(500).json({ message: "An error occurred", error: err.message });
-  }
-};
-
 // ...........................deleteUser........................................
 const deleteUser = async (req, res) => {
   try {
@@ -125,6 +113,5 @@ module.exports = {
   deleteUser,
   updateUser,
   loginUser,
-  getUserByStudent,
   getUserById
 };
