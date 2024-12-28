@@ -92,8 +92,8 @@ const loginUser = async (req, res) => {
 
     const token = await generateToken({
       id: UserData._id,
-      firstName: UserData.firstName,
-      lastName: UserData.lastName,
+      displayName: UserData.displayName,
+      createdAt : UserData.createdAt,
       email: UserData.email
     });
 
